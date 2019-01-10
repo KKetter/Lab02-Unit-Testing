@@ -13,8 +13,7 @@ namespace Lab02_Unit_Testing
 
 
         }
-
-        // Create ATM Logo and Options
+        // Create ATM Logo and Options, Capture User Input
         public static void Menu()
         {
             Console.WriteLine(@"
@@ -47,7 +46,7 @@ Enter (1-4) an operation!
                 Menu();
             }
         }
-        // 
+        // handle atm Functions
         public static void ATMFunction(int menuSelection)
         {
             switch (menuSelection)
@@ -87,11 +86,13 @@ Enter (1-4) an operation!
                     break;
             }
         }
+        // print balance to screen
         public static double DisplayBalance(double Balance)
         {
             Console.Write($"Your balance is ${Balance}\nPress any key to continue.");
             return Balance;
         }
+        // modify balance with deposit transactions
         public static double NewDeposit(double Balance)
         {
             Console.Write("Type an amount of money to deposit: ");
@@ -108,6 +109,7 @@ Enter (1-4) an operation!
             }
             return Balance;
         }
+        // modify balance with withdraw transactions
         public static double NewWithdraw(double Balance)
         {
             Console.Write("Type an amount to withdraw: ");
@@ -129,9 +131,10 @@ Enter (1-4) an operation!
             return Balance;
 
         }
+        // exit program
         public static void ExitAtm()
         {
-            //Enviroment.Exit(0);
+            Environment.Exit(0);
         }
     }
 }
