@@ -4,8 +4,8 @@ Allow user to select basic common ATM functions - Display Balance, Deposit Money
 Perform selected actions and display adjusted balance
 
 Output
-![Menu](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit_Testing/Assets/Lab02-Menu.PNG)
-![Display Balance](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit_Testing/Assets/Lab02-Opt1.PNG)
+![Menu](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit-Testing/Assets/Lab02-Menu.PNG)
+![Display Balance](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit-Testing/Assets/Lab02-Opt1.PNG)
 ![Deposit Pass](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit_Testing/Assets/Lab02-Opt2Pass.PNG)
 ![Deposit Error](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit_Testing/Assets/Lab02-Opt2Fail.PNG)
 ![Withdrawl Pass](https://github.com/KKetter/Lab02-Unit-Testing/blob/READMe/Lab02-Unit_Testing/Assets/Lab02-Opt3Pass.PNG)
