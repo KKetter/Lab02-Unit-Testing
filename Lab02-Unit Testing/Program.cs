@@ -11,10 +11,8 @@ namespace Lab02_Unit_Testing
             Menu();
             Console.ReadLine();
 
-
         }
-
-        // Create ATM Logo and Options
+        // Create ATM Logo and Options, Capture User Input
         public static void Menu()
         {
             Console.WriteLine(@"
@@ -47,7 +45,7 @@ Enter (1-4) an operation!
                 Menu();
             }
         }
-        // 
+        // handle atm Functions
         public static void ATMFunction(int menuSelection)
         {
             switch (menuSelection)
@@ -61,14 +59,20 @@ Enter (1-4) an operation!
 
                 // Deposit Money
                 case 2:
-                    Balance = NewDeposit(Balance);
+                    Console.Write("Type an amount of money to deposit: ");
+                    string userInput = Console.ReadLine();
+                    double systemInput = Convert.ToDouble(userInput);
+                    Balance = NewDeposit(Balance, systemInput);
                     Console.ReadKey();
                     Console.Clear();
                     break;
 
                 // Withdraw Money
                 case 3:
-                    Balance = NewWithdraw(Balance);
+                    Console.Write("Type an amount to withdraw: ");
+                    string userInput3 = Console.ReadLine();
+                    double systemInput3 = Convert.ToDouble(userInput3);
+                    Balance = NewWithdraw(Balance, systemInput3);
                     Console.ReadKey();
                     Console.Clear();
                     break;
@@ -87,16 +91,15 @@ Enter (1-4) an operation!
                     break;
             }
         }
+        // print balance to screen
         public static double DisplayBalance(double Balance)
         {
             Console.Write($"Your balance is ${Balance}\nPress any key to continue.");
             return Balance;
         }
-        public static double NewDeposit(double Balance)
+        // modify balance with deposit transactions
+        public static double NewDeposit(double Balance, double systemInput)
         {
-            Console.Write("Type an amount of money to deposit: ");
-            string userInput = Console.ReadLine();
-            double systemInput = Convert.ToDouble(userInput);
             if (systemInput < 0)
             {
                 Console.WriteLine("Invalid.\nPress any key to continue.");
@@ -108,11 +111,9 @@ Enter (1-4) an operation!
             }
             return Balance;
         }
-        public static double NewWithdraw(double Balance)
+        // modify balance with withdraw transactions
+        public static double NewWithdraw(double Balance, double systemInput)
         {
-            Console.Write("Type an amount to withdraw: ");
-            string userInput = Console.ReadLine();
-            double systemInput = Convert.ToDouble(userInput);
             if (systemInput > Balance)
             {
                 Console.WriteLine("Overdraft Fees are the worst so no money for you!\nPress any key to continue.");
@@ -129,9 +130,10 @@ Enter (1-4) an operation!
             return Balance;
 
         }
+        // exit program
         public static void ExitAtm()
         {
-            //Enviroment.Exit(0);
+            Environment.Exit(0);
         }
     }
 }
