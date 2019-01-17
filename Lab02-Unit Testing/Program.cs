@@ -36,7 +36,7 @@ Enter (1-4) an operation!
             catch (Exception)
             {
 
-                Console.Write("Sorry something went wrong. Try again.\nPress Enter to COntinue.");
+                Console.Write("Sorry something went wrong. Try again.\nPress Enter to Continue.");
                 Console.ReadKey();
                 Console.Clear();
             }
